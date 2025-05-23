@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>AMRUTHA</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Font End Developer</p>
+                <h1>Hi, I'm Amrutha Kurian </h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------About------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/myimage.jfif" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="intro-text">I'm creative Web Designer and Front-end Developer<br> with strong passion for building responsive,<br>userfriendly websites.I blend design aesthetics with clean code to deliver seamless didital experiences.<br> Whether it's designing,coding or visual storytelling,I'm driven to bring ideas to life beautifully.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                          <p class="tab-links"  onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links"  onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Designer</span><br>Website Creation </li>
+                            <li><span>Front-end Developer</span><br>Javascript & Bootstrap </li>
+                            <li><span>Mernstack Developer</span><br>Semantic HTML5, CSS3, Flexbox, Grid, Media Queries </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2025-Till</span><br>Currently  learning MERN stack from Brototype</li>
+                            <li><span>2020-2024</span><br>Worked as an IT Recruiter </li>
+                            <li><span>2015-2017</span><br>Worked as an Associte Analyst</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2014</span><br>Polytechnic in Computer Science</li>
+                            <li><span>2010</span><br>PUC </li>
+                            <li><span>2008</span><br>Matriculation </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------Services--------------------------- -->
+   <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web design</h2>
+                <p>Design clean,responsive and user-friendly interfaces using modern tools like Figma and Adobe XD, ensuring great user experience.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>Front-end development</h2>
+                <p>Creating the user-facing side of websites and web applications and bring design mockups to life using HTML, CSS, and JavaScript, ensuring an engaging and responsive user experience.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>Mernstack development</h2>
+                <p>Build dynamic, full-stack web applications using the MongoDB,Express js, React js, Node js with performance and scalability in mind</p>
+        <a href="#">Learn More</a>
+            </div>
+    </div>
+   </div>
+   </div>
+   <!-- -----------------------Portfolio--------------- -->
+
+   <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="./images/image2/netflix.jfif" alt="">
+                    <div class="layer">
+                        <h3>Netfix Static Webpage</h3>
+                        <p> Netflix homepage built using HTML and CSS (and optionally JavaScript). It replicates the visual layout and design of Netflix's landing page but doesn't include actual streaming features, login authentication, or dynamic content from a server.</p>
+                        <a href="#"><i class=""></i></a>
+                    </div>
+            </div>
+            <div class="work">
+                <img src="./images/image2/papergrid.png" alt="">
+                <div class="layer">
+                        <h3>Papergrid Static Webpage</h3>
+                        <p>Front-end project that visually replicates the design of the Papergrid website—a popular brand for notebooks and stationery in India. It serves as a great project for beginners to practice HTML and CSS, focusing on layout design, typography, and product showcasing—without any dynamic or backend functionality.
+</p>
+                        <a href="#"><i class=""></i></a>
+                    </div>
+            </div>
+            <div class="work">
+                <img src="./images/image2/amazon.jpeg" alt="">
+                <div class="layer">
+                        <h3>Amazon Responsive Website</h3>
+                        <p> front-end project that recreates the look and feel of Amazons homepage using HTML, CSS, and JavaScript. It focuses on mimicking the layout, responsiveness, and interactive elements like navigation and product cards—without using a backend or actual e-commerce functionality.</p>
+                        <a href="#"><i class=""></i></a>
+                    </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+   </div>
+
+<!-- ----------------Contact details-------------------- -->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>    amruthakurian1990@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i>    9497537172</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                     <a href=""><i class="fa-brands fa-instagram"></i></a>
+                      <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                     
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="copyright">
+    <p>@Copyright designed and developed by Amrutha Kurian.<i class="fa-solid fa-heart"></i> All rights reserved. </p>
+ </div>
+</div>
+
+   <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+        var sidemenu = document.querySelector("nav ul");
+    var openMenu = document.querySelector(".fa-bars");
+    var closeMenu = document.querySelector(".fa-xmark");
+
+    openMenu.addEventListener("click", function() {
+        sidemenu.style.right = "0";
+    });
+
+    closeMenu.addEventListener("click", function() {
+        sidemenu.style.right = "-200px";
+    });
+    </script>
+</body>
+</html>
