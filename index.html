@@ -144,15 +144,30 @@
                      
                 </div>
             </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
+            <div class="google-form-sheet">
+                    <form id="form" class="form">
+
+            <div class="form-control">
+                <label for="username">Name</label>
+                <input type="text" id="name" placeholder="Enter username" />
+                <span style="color:red" id="name_error"></span>
             </div>
+           
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text"id="email" placeholder="Enter email" />
+                <span style="color:red" id="email_error"></span>
+            </div>
+           
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" />
+                <span style="color:red" id="pass_error"></span>
+            </div>
+        <button type="submit">Submit</button>
+<p id="success_message" style="color: green; text-align: center; margin-top: 20px;"></p>
+
+        </form>
         </div>
     </div>
  </div>
@@ -190,21 +205,59 @@
     </script>
     <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbzMpE1IXNS1YoLeF5C2oAYx-XJHV1_p_c36s2gH1DQHQnJbOZvQTwon9uNwO8n1xUNvLg/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg");
+  const name = document.getElementById('name');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const form = document.getElementById('form');
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Message sent successfully"
-     setTimeout(function(){
-        msg.innerHTML=""
-     },5000)
-     form.reset()
-     })
-      .catch(error => console.error('Error!', error.message))
-  })
+const name_error = document.getElementById('name_error');
+const email_error = document.getElementById('email_error');
+const pass_error = document.getElementById('pass_error');
+const success_message = document.getElementById('success_message');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent form submission initially
+    let isValid = true;
+
+    const email_check = /^([A-Za-z0-9_\-\.]+)@([A-Za-z0-9_\-\.]+)\.([A-Za-z]{2,4})$/;
+
+    // Name validation
+    if (name.value.trim() === '') {
+        name_error.innerHTML = "Name is required";
+        isValid = false;
+    } else {
+        name_error.innerHTML = "";
+    }
+
+    // Email validation
+    if (!email.value.match(email_check)) {
+        email_error.innerHTML = "Valid Email is required";
+        isValid = false;
+    } else {
+        email_error.innerHTML = "";
+    }
+
+    // Password validation
+    if (password.value.length <= 5) {
+        pass_error.innerHTML = "Password must be more than 6 characters";
+        isValid = false;
+    } else {
+        pass_error.innerHTML = "";
+    }
+
+    // Show message
+    if (isValid) {
+        success_message.innerHTML = "Form submitted successfully!";
+        form.reset();
+
+        // Optional: Hide message after 3 seconds
+        setTimeout(() => {
+            success_message.innerHTML = "";
+        }, 3000);
+    } else {
+        success_message.innerHTML = ""; // Clear success message if any
+    }
+});
 </script>
 </body>
 </html>
