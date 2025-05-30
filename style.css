@@ -250,9 +250,65 @@ margin: 10px 0;
 .contact-left{
     flex-basis: 35%;
 }
-.contact-right{
+.google-form-sheet{
     flex-basis: 60%;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
 }
+.form-control {
+    margin-bottom: 20px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-control input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Error message styling */
+.form-control span {
+    font-size: 14px;
+    margin-top: 4px;
+    display: block;
+    color: red;
+}
+
+/* Submit button */
+button[type="submit"] {
+    width: 100%;
+    background-color: #ff004f;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff004f;
+}
+
 .contact-left p{
     margin-top: 30px;
 }
